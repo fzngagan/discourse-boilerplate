@@ -6,12 +6,11 @@
 # author: Faizaan Gagan
 # url: https://github.com/fzngagan/discourse-boilerplate
 
-after_initialize do
+
     [
         "../lib/plugin_init.rb"
     ].each do |path|
         load File.expand_path(path, __FILE__)
         end
-        Boilerplate::PluginInit.new(self)
 
-end
+        Boilerplate::PluginInit.new(self)
