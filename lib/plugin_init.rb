@@ -11,7 +11,7 @@ module Boilerplate
     end
 
     def method_missing(method, *args, &block)
-      @instance.public_send method, *args, &block
+      @instance.send method, *args, &block
     end
   end
 end
